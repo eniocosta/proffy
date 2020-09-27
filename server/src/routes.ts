@@ -1,4 +1,5 @@
 import express from 'express';
+
 import ClassesController from './controllers/ClassesController';
 import ConnectionsController from './controllers/ConnectionsController';
 
@@ -7,7 +8,7 @@ const classesController = new ClassesController();
 const connectionsController = new ConnectionsController();
 
 routes.get('/', (request, response) => {
-    response.json({msg: "Hello World"})
+    return response.json({msg: "Hello World"});
 });
 
 routes.get('/classes', classesController.index);
